@@ -1,0 +1,719 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url(fonts/PT_Sans/PTSans-Bold.ttf);
+  src: url(fonts/PT_Sans/PTSans-BoldItalic.ttf);
+  src: url(fonts/PT_Sans/PTSans-Italic.ttf);
+  src: url(fonts/PT_Sans/PTSans-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+  font-family: "PT Sans", sans-serif;
+}
+.hero {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+.nav {
+  background-color: #1c2237;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.navbar_list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.navbar_list li {
+  margin-right: 30px;
+}
+.navbar_list li:last-child {
+  margin-right: 0;
+}
+.navbar_list a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 32px;
+  transition: all 0.3s ease;
+}
+.nav_logo a {
+  font-size: 28px;
+  line-height: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+}
+.phone_logo {
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+.phone_logo:hover {
+  background-color: #fff;
+  color: #1c2237;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header_title {
+  color: #fff;
+  width: 600px;
+}
+.header_title h1 {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 0.3px;
+}
+.advantages_list {
+  list-style: none;
+  font-size: 24px;
+  line-height: 32px;
+}
+.form {
+  width: 270px;
+  height: 300px;
+  background-color: #3079bd;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form h4 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+.form input {
+  width: 200px;
+  font-size: 15px;
+  border-radius: 10px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+.form input:first-child {
+  margin-top: 50px;
+}
+.btn {
+  border: none;
+  border-radius: 10px;
+  width: 180px;
+  height: 50px;
+  background-color: red;
+  color: #fff;
+  font-size: 20px;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: rgba(236, 44, 44, 0.808);
+}
+
+.about {
+  margin: 100px 0;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.inner_title {
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 30px;
+}
+.how_works {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.how_works_item {
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1c2237;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+.how_works_item:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #3aa1ff;
+  box-shadow: #1c2237 10px 10px;
+}
+
+.how_works_item img {
+  padding-bottom: 20px;
+}
+
+.work {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #1c2237;
+  padding-top: 50px;
+}
+.work_title {
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 50px;
+}
+.work_item ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  margin-top: 30px;
+}
+.work_item li {
+  position: relative;
+  cursor: pointer;
+  height: 50px;
+}
+.work_item li:hover {
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+.work_item li:first-child::before {
+  content: "";
+}
+.work_item li::before {
+  position: absolute;
+  content: "|";
+  left: -55px;
+}
+.work_text li {
+  display: none;
+  margin-top: 50px;
+  width: 600px;
+  transition: all 0.3s ease;
+}
+
+.work_text .active {
+  display: block;
+}
+
+.card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+.card_item {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 17px;
+}
+.card_item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+/* GEO */
+
+.geo {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #1c2237;
+}
+.geo_inner_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.geo_inner_title h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.block_text {
+  width: 400px;
+  margin-right: 50px;
+}
+.block_text:last-child {
+  margin-left: 50px;
+  margin-right: 0;
+}
+
+/* discount */
+
+.discount {
+  width: 100%;
+  background: #ffffff;
+  color: #1c2237;
+  margin-bottom: 100px;
+  padding: 50px 0;
+}
+.discount_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1c2237;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+.discount_item:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #3aa1ff;
+  box-shadow: #1c2237 10px 10px;
+}
+.discount_item_title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.discount_item_title h2 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+}
+.discount_item ul {
+  list-style: none;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.discount_item li {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.call {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #1c2237;
+}
+.request {
+  text-align: center;
+}
+.request a {
+  text-decoration: none;
+  color: #fff;
+  padding-top: 10px;
+  border-bottom: 1px solid red;
+}
+
+/* media */
+
+@media (min-width: 651px) and (max-width: 1150px) {
+  .hero {
+    width: 100%;
+    position: fixed;
+  }
+  .header_title h1 {
+    font-size: 35px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    width: 400px;
+  }
+  .advantages_list p {
+    font-size: 20px;
+  }
+  .header {
+    height: 100vh;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .form {
+    margin-top: 100px;
+  }
+  .nav {
+    height: 90px;
+  }
+  .nav_logo a {
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
+  .navbar_list a {
+    font-size: 20px;
+  }
+  .navbar_list li {
+    margin-right: 15px;
+  }
+  .header_title {
+    width: 400px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .inner_title {
+    font-size: 25px;
+    padding-bottom: 50px;
+  }
+  .about {
+    margin: 50px 0;
+  }
+  .how_works {
+    display: flex;
+    flex-direction: column;
+  }
+  .how_works_item p {
+    font-size: 18px;
+  }
+  .work_title {
+    width: 700px;
+    text-align: center;
+  }
+  .work_item ul {
+    display: flex;
+  }
+  .work_item li::before {
+    display: none;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .work_text li {
+    width: 100%;
+  }
+  .card_item {
+    width: 100%;
+    padding: 10px;
+  }
+  .geo_inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .geo_inner_title {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  .block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .block_text {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-right: 50px;
+  }
+  .block_text:last-child {
+    margin-left: 50px;
+  }
+  .block img {
+    width: 50%;
+  }
+  .discount_item {
+    padding: 10px;
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 421px) and (max-width: 650px) {
+  .hero {
+    width: 100%;
+    position: fixed;
+  }
+  .header_title h1 {
+    font-size: 26px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+  }
+  .advantages_list p {
+    font-size: 18px;
+  }
+  .header {
+    height: 100%;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    margin-bottom: 50px;
+  }
+  .nav {
+    height: 90px;
+  }
+  .nav_logo a {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .navbar_list a {
+    font-size: 13px;
+  }
+  .navbar_list li {
+    margin-right: 15px;
+  }
+  .header_title {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .inner_title {
+    font-size: 25px;
+    padding-bottom: 50px;
+  }
+  .about {
+    margin: 50px 0;
+  }
+  .how_works {
+    display: flex;
+    flex-direction: column;
+  }
+  .work_title {
+    width: 100%;
+    text-align: center;
+  }
+  .work_item ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .work_item li::before {
+    display: none;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .work_text li {
+    width: 100%;
+  }
+  .card_item {
+    width: 100%;
+    padding: 10px;
+  }
+  .geo_inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .geo_inner_title {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    padding: 10px;
+  }
+  .block img {
+    width: 70%;
+  }
+  .block_text {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin: 50px 0;
+  }
+  .block_text:last-child {
+    margin-left: 0;
+  }
+  .discount_item {
+    padding: 10px;
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 300px) and (max-width: 420px) {
+  .hero {
+    width: 100%;
+    position: fixed;
+  }
+  .header_title h1 {
+    font-size: 20px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+  }
+  .advantages_list p {
+    font-size: 18px;
+  }
+  .header {
+    height: 100vh;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    margin-bottom: 50px;
+  }
+  .nav {
+    height: 90px;
+  }
+  .nav_logo a {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .navbar_list a {
+    font-size: 13px;
+  }
+  .navbar_list li {
+    margin-right: 15px;
+  }
+  .header_title {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .inner_title {
+    font-size: 25px;
+  }
+  .about {
+    margin: 50px 0;
+  }
+  .how_works {
+    display: flex;
+    flex-direction: column;
+  }
+  .work_title {
+    width: 100%;
+    text-align: center;
+  }
+  .work_title h2 {
+    font-size: 25px;
+  }
+  .work_item ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .work_item li::before {
+    display: none;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .work_text li {
+    width: 100%;
+  }
+  .card_item {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .geo_inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .geo_inner_title {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .block img {
+    width: 70%;
+  }
+  .block_text {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin: 50px 0;
+  }
+  .block_text:last-child {
+    margin-left: 0;
+  }
+  .discount_item {
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (width: 320px) {
+  .header_title {
+    margin-top: 50px;
+  }
+  .form h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .form {
+    height: 250px;
+  }
+  .btn {
+    margin-bottom: 10px;
+  }
+}
