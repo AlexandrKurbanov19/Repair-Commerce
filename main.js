@@ -1,3 +1,4 @@
+
 var slide1 = document.getElementById('slide1');
 var slide2 = document.getElementById('slide2');
 var slide3 = document.getElementById('slide3');
@@ -31,3 +32,4 @@ slide3.onclick = function (event) {
 
 const work = document.getElementById('work');
 work.scrollIntoView();
+
